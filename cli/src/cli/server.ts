@@ -45,9 +45,9 @@ export default async function runServer(
     server.on("error", e);
   });
 
-  server.listen(port, "localhost");
+  server.listen(port, "0.0.0.0");
 
-  const url = `http://localhost:${ port }`;
+  const url = `http://0.0.0.0:${ port }`;
 
   await serverStarted;
   console.log(`Dolos is available on ${ url }`);
